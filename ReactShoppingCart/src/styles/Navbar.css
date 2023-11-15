@@ -1,0 +1,25 @@
+.wholeNavbar {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    background-color: rgb(19,19,19);
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.links {
+    color: white;
+    margin-right: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.links a {
+    margin-left: 30px;
+    font-size: 25px;
+}
