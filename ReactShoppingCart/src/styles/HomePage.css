@@ -1,0 +1,28 @@
+.wholePage {
+
+}
+
+.mainContent {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5%;
+    background-color: #e8f9fd;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+button {
+    width: 284px;
+    padding: 10px 10px 20px 10px;
+    border: 1px solid #BFBFBF;
+    background-color: white;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.imagesUnder {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2%;
+}
