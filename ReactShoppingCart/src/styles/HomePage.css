@@ -1,5 +1,5 @@
 .wholePage {
-
+    margin-right: 1%;
 }
 
 .mainContent {
@@ -11,6 +11,7 @@
     padding-bottom: 5%;
     background-color: #e8f9fd;
     box-shadow: 0 4px 2px -2px gray;
+
 }
 
 button {
@@ -25,4 +26,10 @@ button {
     display: flex;
     justify-content: space-evenly;
     margin-top: 2%;
+}
+
+.card img {
+    max-height: 300px;
+    max-width: 300px;
+    display: block;
 }
