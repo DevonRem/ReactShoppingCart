@@ -1,15 +1,14 @@
 .wholePage {
     margin-right: 1%;
+    
 }
 
 .mainContent {
-    margin-top: 10%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     padding-bottom: 5%;
-    background-color: #e8f9fd;
+    background-color: #FEE715;
     box-shadow: 0 4px 2px -2px gray;
 
 }
@@ -20,6 +19,20 @@ button {
     border: 1px solid #BFBFBF;
     background-color: white;
     box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.addToCart {
+    background-color: transparent;
+    border: 2px solid rgb(19,19,19);
+    box-shadow: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.addToCart:hover {
+    background-color: rgb(19,19,19);
+    color: white;
+    cursor: pointer;
 }
 
 .imagesUnder {

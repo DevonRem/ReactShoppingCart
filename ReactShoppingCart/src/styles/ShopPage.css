@@ -1,3 +1,30 @@
 .wholePage {
-    margin-top: 10%;
+    margin-top: 6%;
+}
+
+.mainShopContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.shopImagesUnder {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 2%;
+}
+
+.shopImagesUnder img {
+    height: 300px;
+    width: 300px;
+    
+}
+
+.card {
+    height: 500px;
+    width: 400px;
+    text-overflow: ellipsis;
 }

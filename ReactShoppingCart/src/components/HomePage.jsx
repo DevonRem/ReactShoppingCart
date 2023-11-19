@@ -40,6 +40,7 @@ function HomePage() {
                       <h5>{product.title}</h5>
                       <h5>{`Price: $${product.price}`}</h5>
                     </div>
+                    <button className='addToCart'> Add to Cart</button>
                     </div>
                 ))}
 
