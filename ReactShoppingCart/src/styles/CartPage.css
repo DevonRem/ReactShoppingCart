@@ -1,0 +1,14 @@
+.wholePage {
+    margin-top: 10%;
+}
+
+.checkoutBtn {
+    background-color: #0058ab;
+    color: white;
+    box-shadow: none;
+    font-weight: bold;
+}
+
+.items {
+    margin-bottom: 1%;
+}

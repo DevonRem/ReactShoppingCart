@@ -1,4 +1,4 @@
-import '../styles/ShopPage.css'
+import '../styles/CartPage.css'
 import { Link } from "react-router-dom"
 import Navbar from './Navbar'
 
@@ -10,8 +10,14 @@ function CartPage() {
     <Navbar></Navbar>
 
         <div className='wholePage'>
-            <p>CartPage test</p>
-            <Link to="/">You can go back to the home page by clicking here!</Link>
+            <div className='cartTitle'>
+                <h1>Your Cart:</h1>
+            </div>
+            <div className='items'>
+              There are currently no items in your cart.
+            </div>
+
+            <button className='checkoutBtn'>Proceed to Checkout</button>
         </div>
     </>
   )
