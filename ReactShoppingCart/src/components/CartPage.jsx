@@ -1,9 +1,11 @@
 import '../styles/CartPage.css'
 import { Link } from "react-router-dom"
 import Navbar from './Navbar'
+import { ShopContext } from '../context/ShopContext';
+import { useContext } from 'react';
 
-function CartPage() {
-  
+function CartPage(props) {
+  const { addItem, removeItem, cartItems } = useContext(ShopContext);
 
   return (
     <>
@@ -14,10 +16,20 @@ function CartPage() {
                 <h1>Your Cart:</h1>
             </div>
             <div className='items'>
-              There are currently no items in your cart.
+              {cartItems.length === 0 && <div>There are currently no items in your cart.</div>}
+              {cartItems.map((product)=> (
+                  <div key={product.id} className='card'>
+                    <div><img src={product.image} alt="#"/></div>
+                    <div className="card-description">
+                      <h5>{product.title}</h5>
+                      <h5>{`Price: $${product.price}`}</h5>
+                    </div>
+                    <button className='addToCart' onClick={()=>removeItem(product)}> Remove from Cart </button>
+                    </div>
+                ))}
             </div>
 
-            <button className='checkoutBtn'>Proceed to Checkout</button>
+            {cartItems.length > 0 && <button className='checkoutBtn'>Proceed to Checkout</button>}
         </div>
     </>
   )

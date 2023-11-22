@@ -1,11 +1,14 @@
 import '../styles/ShopPage.css'
 import { Link } from "react-router-dom"
 import Navbar from './Navbar'
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
+import { ShopContext } from '../context/ShopContext';
 
 function ShopPage() {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
+
+  const { addItem } = useContext(ShopContext);
 
   useEffect(() => {
     setLoading(true);
@@ -39,7 +42,7 @@ function ShopPage() {
                       <h5>{product.title}</h5>
                       <h5>{`Price: $${product.price}`}</h5>
                     </div>
-                    <button className='addToCart'> Add to Cart</button>
+                    <button className='addToCart' onClick={()=>addItem(product)}> Add to Cart</button>
                     </div>
                 ))}
 

@@ -1,10 +1,16 @@
 import '../styles/HomePage.css'
 import { Link } from "react-router-dom"
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
+import { ShopContext } from '../context/ShopContext';
 
-function HomePage() {
+function HomePage(props) {
+
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
+
+  const { addItem, cartItems } = useContext(ShopContext);
+
+
 
   useEffect(() => {
     setLoading(true);
@@ -14,6 +20,7 @@ function HomePage() {
       .catch((error) => console.error(error))
       .finally(()=> setLoading(false));
   }, []);
+
 
 
   return (
@@ -40,7 +47,7 @@ function HomePage() {
                       <h5>{product.title}</h5>
                       <h5>{`Price: $${product.price}`}</h5>
                     </div>
-                    <button className='addToCart'> Add to Cart</button>
+                    <button className='addToCart' onClick={()=>addItem(product)}> Add to Cart </button>
                     </div>
                 ))}
 
