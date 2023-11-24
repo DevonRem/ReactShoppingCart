@@ -11,7 +11,7 @@ export const ShopContextProvider = (props) => {
     }
 
     const removeItem = (i) => {
-        const newArr = cartItems.filter((item) => item.name !== i)
+        const newArr = cartItems.filter((item) => item.id !== i)
         setCartItems(newArr);
     }
 

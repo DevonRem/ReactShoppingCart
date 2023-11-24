@@ -24,7 +24,7 @@ function CartPage(props) {
                       <h5>{product.title}</h5>
                       <h5>{`Price: $${product.price}`}</h5>
                     </div>
-                    <button className='addToCart' onClick={()=>removeItem(product)}> Remove from Cart </button>
+                    <button className='addToCart' onClick={()=>removeItem(product.id)}> Remove from Cart </button>
                     </div>
                 ))}
             </div>
