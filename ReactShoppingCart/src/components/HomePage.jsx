@@ -2,6 +2,7 @@ import '../styles/HomePage.css'
 import { Link } from "react-router-dom"
 import { useContext, useEffect, useState } from "react"
 import { ShopContext } from '../context/ShopContext';
+import  HomeImg from "../assets/HomeLogo.jpg";
 
 function HomePage(props) {
 
@@ -27,9 +28,9 @@ function HomePage(props) {
     <>
         <div className='wholePage'>
             <div className='mainContent'>
-                <h1>Welcome to Dev's shop!</h1>
-                <h4>Click here to go to the shop page!</h4>
-                <Link to="ShopPage"><button>Shop</button></Link>
+
+            <Link to="ShopPage"><img src={HomeImg} className='homeImg'></img></Link>
+
             </div>
           <h1>Featured Items:</h1>
           <div className='imagesUnder'>
